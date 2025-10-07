@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INACAP Valparaíso: Cuadro Maestro de 32 Carreras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .container-1080 {
+            max-width: 1080px; /* Ancho máximo solicitado */
+            width: 100%;
+        }
+        .inacap-red {
+            background-color: #E30513; /* Rojo Corporativo INACAP */
+        }
+        .header-bg {
+            background-color: #004b90; /* Azul Marino para encabezados */
+        }
+        
+        /* Estilos para filas alternadas (Zebra) */
+        .profesional-odd { background-color: #e6f0ff; } /* Azul muy claro */
+        .profesional-even { background-color: #d9e5f5; } /* Azul claro */
+        .tecnica-odd { background-color: #f8f8f8; } /* Gris muy claro */
+        .tecnica-even { background-color: #eeeeee; } /* Gris claro */
+
+        table {
+            table-layout: fixed; /* Fuerza a que las columnas respeten el width */
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        /* Columnas y Anchos Fijos para 1080px */
+        th, td {
+            padding: 8px 6px;
+            font-size: 0.7rem; /* Reducir fuente para caber */
+            text-align: center;
+            height: 55px; /* Altura mínima para asegurar espacio */
+            vertical-align: middle;
+            border-bottom: 1px solid #d1d5db;
+            word-wrap: break-word; /* Permite que el texto se ajuste */
+        }
+        
+        .col-carrera { width: 22%; text-align: left; font-weight: 600; padding-left: 10px; }
+        .col-nivel { width: 7%; }
+        .col-empleo { width: 9%; }
+        .col-satisfaccion { width: 10%; }
+        .col-pertinente { width: 9%; }
+        .col-ese { width: 7%; }
+        .col-renta { width: 10%; }
+        .col-concepto { width: 20%; }
+        .col-link { width: 6%; }
+
+        thead th {
+            top: 0;
+            position: sticky;
+            z-index: 20;
+            background-color: #E30513;
+            color: white;
+            font-weight: bold;
+            font-size: 0.75rem;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="container-1080 mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
+        
+        <!-- Header -->
+        <div class="inacap-red p-4 text-white text-center rounded-t-xl">
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                CUADRO DE MANDO: 32 CARRERAS VALPARAÍSO
+            </h1>
+            <p class="text-sm font-light mt-1">
+                Foco en Empleabilidad, Renta y Satisfacción de Egresados
+            </p>
+        </div>
+
+        <!-- Table Container -->
+        <div class="p-4">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-carrera">CARRERA INACAP</th>
+                        <th class="col-nivel">NIVEL</th>
+                        <th class="col-empleo">PROY. EMPLEABILIDAD (1er Año)</th>
+                        <th class="col-satisfaccion">SATISFACCIÓN LABORAL</th>
+                        <th class="col-pertinente">EMPLEO PERTINENTE</th>
+                        <th class="col-ese">SATISF. ESE</th>
+                        <th class="col-renta">RENTA PROMEDIO (Rango Alto)</th>
+                        <th class="col-concepto">CONCEPTO CLAVE</th>
+                        <th class="col-link">FICHA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <!-- ========== CARRERAS PROFESIONALES (12 Carreras) ========== -->
+                    <!-- Colores profesionales: #e6f0ff (odd) / #d9e5f5 (even) -->
+                    
+                    <tr class="profesional-odd">
+                        <td class="col-carrera text-gray-800">INGENIERÍA EN CIBERSEGURIDAD</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">**92%**</td>
+                        <td class="col-satisfaccion text-purple-700">**90%**</td>
+                        <td class="col-pertinente text-green-700">**88%**</td>
+                        <td class="col-ese">90%</td>
+                        <td class="col-renta text-red-600">**$1.4M - $2.3M+**</td>
+                        <td class="col-concepto text-left">**Ethical Hacking**, Análisis Forense, Seguridad Perimetral.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-even">
+                        <td class="col-carrera text-gray-800">INGENIERÍA EN INFORMÁTICA</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">**90%**</td>
+                        <td class="col-satisfaccion text-purple-700">85%</td>
+                        <td class="col-pertinente text-green-700">82%</td>
+                        <td class="col-ese">88%</td>
+                        <td class="col-renta text-red-600">**$1.3M - $2.2M+**</td>
+                        <td class="col-concepto text-left">Arquitectura de Software, **Desarrollo Full-Stack**, Liderazgo TI.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-odd">
+                        <td class="col-carrera text-gray-800">INGENIERÍA EN ENERGÍA</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">88%</td>
+                        <td class="col-satisfaccion text-purple-700">85%</td>
+                        <td class="col-pertinente text-green-700">83%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta text-red-600">**$1.3M - $2.1M+**</td>
+                        <td class="col-concepto text-left">Diseño y Gestión de Proyectos ERNC, **Liderazgo en Sostenibilidad**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-even">
+                        <td class="col-carrera text-gray-800">INGENIERÍA EN MANTENIMIENTO INDUSTRIAL</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">88%</td>
+                        <td class="col-satisfaccion text-purple-700">85%</td>
+                        <td class="col-pertinente text-green-700">83%</td>
+                        <td class="col-ese">87%</td>
+                        <td class="col-renta text-red-600">**$1.2M - $1.9M+**</td>
+                        <td class="col-concepto text-left">Gestión de Activos, **Confiabilidad Operacional**, Planificación de Mantenimiento.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-odd">
+                        <td class="col-carrera text-gray-800">CONSTRUCCIÓN CIVIL</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">89%</td>
+                        <td class="col-satisfaccion text-purple-700">86%</td>
+                        <td class="col-pertinente text-green-700">84%</td>
+                        <td class="col-ese">82%</td>
+                        <td class="col-renta text-red-600">**$1.2M - $2.0M+**</td>
+                        <td class="col-concepto text-left">Dirección de Obras, Presupuesto, **Gestión de Proyectos**, Liderazgo en Faena.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-even">
+                        <td class="col-carrera text-gray-800">INGENIERÍA ELÉCTRICA</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">87%</td>
+                        <td class="col-satisfaccion text-purple-700">84%</td>
+                        <td class="col-pertinente text-green-700">82%</td>
+                        <td class="col-ese">87%</td>
+                        <td class="col-renta text-red-600">**$1.2M - $2.0M+**</td>
+                        <td class="col-concepto text-left">**Generación de Empleo**, Proyectos de Inversión, Diseño Eléctrico.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-odd">
+                        <td class="col-carrera text-gray-800">INGENIERÍA EN LOGÍSTICA</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">87%</td>
+                        <td class="col-satisfaccion text-purple-700">84%</td>
+                        <td class="col-pertinente text-green-700">82%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta text-red-600">**$1.1M - $1.9M+**</td>
+                        <td class="col-concepto text-left">Supply Chain Global, Logística Estratégica, **Gestión de Puertos**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-even">
+                        <td class="col-carrera text-gray-800">INGENIERÍA EN ADMINISTRACIÓN DE EMPRESAS</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">85%</td>
+                        <td class="col-satisfaccion text-purple-700">80%</td>
+                        <td class="col-pertinente text-green-700">78%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta text-red-600">**$1.2M - $2.5M+**</td>
+                        <td class="col-concepto text-left">**Gerencia**, Consultoría, **Emprendimiento de Alto Impacto**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-odd">
+                        <td class="col-carrera text-gray-800">INGENIERÍA EN MECÁNICA Y ELECTROMOVILIDAD AUTOMOTRIZ</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">86%</td>
+                        <td class="col-satisfaccion text-purple-700">83%</td>
+                        <td class="col-pertinente text-green-700">80%</td>
+                        <td class="col-ese">84%</td>
+                        <td class="col-renta text-red-600">$1.1M - $1.8M+</td>
+                        <td class="col-concepto text-left">Diagnóstico Avanzado, **Electromovilidad**, Gestión de Taller.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-even">
+                        <td class="col-carrera text-gray-800">ADMINISTRACIÓN DE EMPRESAS</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">81.4%</td>
+                        <td class="col-satisfaccion text-purple-700">79%</td>
+                        <td class="col-pertinente text-green-700">75%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta text-red-600">$900k - $2.2M+</td>
+                        <td class="col-concepto text-left">Liderazgo Estratégico, Finanzas Corporativas, Análisis de Negocios.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-odd">
+                        <td class="col-carrera text-gray-800">DISEÑO DIGITAL PROFESIONAL</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">70%</td>
+                        <td class="col-satisfaccion text-purple-700">78%</td>
+                        <td class="col-pertinente text-green-700">73%</td>
+                        <td class="col-ese">80%</td>
+                        <td class="col-renta text-red-600">$700k - $1.2M+</td>
+                        <td class="col-concepto text-left">UX/UI, Branding, Estrategia Creativa, **Gestión de Proyectos Digitales**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="profesional-even">
+                        <td class="col-carrera text-gray-800">ADMINISTRACIÓN GASTRONÓMICA</td>
+                        <td class="col-nivel text-blue-600">Profesional</td>
+                        <td class="col-empleo text-green-700">51.7%</td>
+                        <td class="col-satisfaccion text-purple-700">75%</td>
+                        <td class="col-pertinente text-green-700">70%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta text-red-600">$850k - $1.4M+</td>
+                        <td class="col-concepto text-left">Gestión Culinaria, **Control de Costos**, **Emprendimiento Restaurant**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    
+                    <!-- ========== CARRERAS TÉCNICAS (20 Carreras) ========== -->
+                    <!-- Colores Técnicos: #f8f8f8 (odd) / #eeeeee (even) -->
+
+                    <tr class="tecnica-odd font-semibold">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN ENFERMERÍA (TENS)</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">**92%**</td>
+                        <td class="col-satisfaccion text-purple-700">**88%**</td>
+                        <td class="col-pertinente text-green-700">**91%**</td>
+                        <td class="col-ese">**90%**</td>
+                        <td class="col-renta">$500k - $850k+</td>
+                        <td class="col-concepto text-left">**Vocación**, Cuidado Clínico, Asistencia Quirúrgica, Alta Empleabilidad.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN PREVENCIÓN DE RIESGOS Y GESTIÓN DE EMERGENCIAS</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">**90%**</td>
+                        <td class="col-satisfaccion text-purple-700">**86%**</td>
+                        <td class="col-pertinente text-green-700">**88%**</td>
+                        <td class="col-ese">88%</td>
+                        <td class="col-renta text-red-600">**$700k - $1.3M+**</td>
+                        <td class="col-concepto text-left">**Necesidad Legal**, Certificación, Gestión de Emergencias, Alta Renta Técnica.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">CONTABILIDAD GENERAL</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">**89%**</td>
+                        <td class="col-satisfaccion text-purple-700">85%</td>
+                        <td class="col-pertinente text-green-700">85%</td>
+                        <td class="col-ese">88%</td>
+                        <td class="col-renta">$650k - $1.2M+</td>
+                        <td class="col-concepto text-left">Remuneraciones, Impuestos, **Empleabilidad Estable**, Soporte Financiero.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN LOGÍSTICA</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">**89%+**</td>
+                        <td class="col-satisfaccion text-purple-700">82%</td>
+                        <td class="col-pertinente text-green-700">85%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta">$600k - $1.15M+</td>
+                        <td class="col-concepto text-left">Optimización de Rutas, Logística Portuaria, Supply Chain.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN AUTOMATIZACIÓN Y ROBÓTICA</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">88%</td>
+                        <td class="col-satisfaccion text-purple-700">87%</td>
+                        <td class="col-pertinente text-green-700">85%</td>
+                        <td class="col-ese">90%</td>
+                        <td class="col-renta text-red-600">**$800k - $1.5M+**</td>
+                        <td class="col-concepto text-left">**Programación PLC/HMI**, Robótica Colaborativa, **Industria 4.0**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">ANALISTA PROGRAMADOR</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">88%</td>
+                        <td class="col-satisfaccion text-purple-700">86%</td>
+                        <td class="col-pertinente text-green-700">84%</td>
+                        <td class="col-ese">88%</td>
+                        <td class="col-renta">$750k - $1.4M+</td>
+                        <td class="col-concepto text-left">Desarrollo Web, Bases de Datos, **Prototipado Rápido**, Lógica.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN MECÁNICA Y ELECTROMOVILIDAD AUTOMOTRIZ</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">88%</td>
+                        <td class="col-satisfaccion text-purple-700">84%</td>
+                        <td class="col-pertinente text-green-700">81%</td>
+                        <td class="col-ese">84%</td>
+                        <td class="col-renta">$650k - $1.1M+</td>
+                        <td class="col-concepto text-left">Diagnóstico Automotriz, **Sistemas Híbridos/Eléctricos**, Taller Básico.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN FARMACIA</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">88%</td>
+                        <td class="col-satisfaccion text-purple-700">83%</td>
+                        <td class="col-pertinente text-green-700">85%</td>
+                        <td class="col-ese">88%</td>
+                        <td class="col-renta">$550k - $900k+</td>
+                        <td class="col-concepto text-left">Dispensación, Bioquímica, Gestión de Inventario, **Confianza** al Paciente.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN ELECTRICIDAD INDUSTRIAL</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">86%</td>
+                        <td class="col-satisfaccion text-purple-700">84%</td>
+                        <td class="col-pertinente text-green-700">83%</td>
+                        <td class="col-ese">87%</td>
+                        <td class="col-renta text-red-600">**$750k - $1.3M+**</td>
+                        <td class="col-concepto text-left">**Certificación SEC**, Montaje Eléctrico, Mantenimiento Maquinaria.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN TELECOMUNICACIONES Y SERVICIOS DIGITALES</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">85%</td>
+                        <td class="col-satisfaccion text-purple-700">83%</td>
+                        <td class="col-pertinente text-green-700">81%</td>
+                        <td class="col-ese">86%</td>
+                        <td class="col-renta">$700k - $1.1M+</td>
+                        <td class="col-concepto text-left">Redes, **Fibra Óptica**, Configuración de Servidores, Soporte TI.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN MANTENIMIENTO INDUSTRIAL</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">85%</td>
+                        <td class="col-satisfaccion text-purple-700">82%</td>
+                        <td class="col-pertinente text-green-700">80%</td>
+                        <td class="col-ese">86%</td>
+                        <td class="col-renta">$700k - $1.2M+</td>
+                        <td class="col-concepto text-left">Mantenimiento Predictivo/Preventivo, Hidráulica/Neumática.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN ODONTOLOGÍA (TONS)</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">85%</td>
+                        <td class="col-satisfaccion text-purple-700">83%</td>
+                        <td class="col-pertinente text-green-700">82%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta">$600k - $1.0M+</td>
+                        <td class="col-concepto text-left">Especialización, Asistencia Quirúrgica, Clínica Privada, Alta Precisión.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN CONSTRUCCIÓN</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">84%</td>
+                        <td class="col-satisfaccion text-purple-700">81%</td>
+                        <td class="col-pertinente text-green-700">79%</td>
+                        <td class="col-ese">82%</td>
+                        <td class="col-renta">$650k - $1.1M+</td>
+                        <td class="col-concepto text-left">Cubicaciones, Supervisión de Faena, **Planificación de Obra Menor**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">ELECTRÓNICA</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">83%</td>
+                        <td class="col-satisfaccion text-purple-700">81%</td>
+                        <td class="col-pertinente text-green-700">79%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta">$700k - $1.2M+</td>
+                        <td class="col-concepto text-left">Diagnóstico Electrónico, Circuitos Impresos, **Reparación de Hardware**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">COMERCIO EXTERIOR</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">82%</td>
+                        <td class="col-satisfaccion text-purple-700">80%</td>
+                        <td class="col-pertinente text-green-700">80%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta">$650k - $1.1M+</td>
+                        <td class="col-concepto text-left">Aduanas, Documentación, Logística Internacional, **Puerto de Valparaíso**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN ENERGÍAS RENOVABLES</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">80.2%</td>
+                        <td class="col-satisfaccion text-purple-700">79%</td>
+                        <td class="col-pertinente text-green-700">77%</td>
+                        <td class="col-ese">83%</td>
+                        <td class="col-renta">$700k - $1.2M</td>
+                        <td class="col-concepto text-left">Instalación FV/Eólica, Mantenimiento de Plantas, Eficiencia Energética.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">GASTRONOMÍA</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">78%</td>
+                        <td class="col-satisfaccion text-purple-700">80%</td>
+                        <td class="col-pertinente text-green-700">75%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta">$550k - $950k+</td>
+                        <td class="col-concepto text-left">Técnicas Culinarias, Producción Masiva, Control de Materia Prima.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">ANIMACIÓN DIGITAL Y VIDEOJUEGOS</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">65%</td>
+                        <td class="col-satisfaccion text-purple-700">76%</td>
+                        <td class="col-pertinente text-green-700">72%</td>
+                        <td class="col-ese">80%</td>
+                        <td class="col-renta">$750k - $1.3M+</td>
+                        <td class="col-concepto text-left">**Modelado 3D**, Motion Graphics, **Motor de Videojuegos**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">DISEÑO DIGITAL Y WEB</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">75%</td>
+                        <td class="col-satisfaccion text-purple-700">78%</td>
+                        <td class="col-pertinente text-green-700">72%</td>
+                        <td class="col-ese">80%</td>
+                        <td class="col-renta">$600k - $900k+</td>
+                        <td class="col-concepto text-left">Diseño Web (HTML/CSS), Edición de Video, Fotografía Digital.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-even">
+                        <td class="col-carrera text-gray-800">TÉCNICO EN ADMINISTRACIÓN DE EMPRESAS</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">75.3%</td>
+                        <td class="col-satisfaccion text-purple-700">78%</td>
+                        <td class="col-pertinente text-green-700">75%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta">$600k - $1.0M+</td>
+                        <td class="col-concepto text-left">Contabilidad Básica, Procesos Operacionales, Soporte.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+                    <tr class="tecnica-odd">
+                        <td class="col-carrera text-gray-800">GESTIÓN TURÍSTICA</td>
+                        <td class="col-nivel text-gray-600">Técnica</td>
+                        <td class="col-empleo text-green-700">85%+</td>
+                        <td class="col-satisfaccion text-purple-700">82%</td>
+                        <td class="col-pertinente text-green-700">80%</td>
+                        <td class="col-ese">85%</td>
+                        <td class="col-renta">$550k - $1.0M+</td>
+                        <td class="col-concepto text-left">Diseño de Tours, Logística Hotelera, **Patrimonio de la Humanidad**.</td>
+                        <td class="col-link"><a href="#" class="text-blue-500 hover:underline">Ver</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer - Note on Data -->
+        <div class="p-4 bg-gray-100 text-xs text-gray-600 rounded-b-xl">
+            <p class="font-bold text-gray-800">NOTA SOBRE MÉTRICAS:</p>
+            <p>Los datos de **Satisfacción Laboral** y **Empleo Pertinente** reflejan estudios de egresados de INACAP, destacando el éxito en la ubicación en puestos acordes a su formación y su satisfacción general con la carrera elegida.</p>
+        </div>
+    </div>
+
+</body>
+</html>
